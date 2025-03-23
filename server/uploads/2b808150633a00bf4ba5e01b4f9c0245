@@ -1,0 +1,9 @@
+title,description,inputFormat,outputFormat,constraints,testCase1,testCase2,testCase3,testCase4,testCase5,testCase6,testCase7
+Find the Absolute Value,Write a function to find the absolute value of a number.,"A single integer, n.",Print the absolute value.,-10^6 ≤ n ≤ 10^6,-5|5,10|10,-100|100,0|0,999|999,-1|1,-12345|12345
+Find the Maximum of Two Numbers,Write a function to return the maximum of two numbers.,"Two integers, a and b.",Print the maximum number.,"-10^6 ≤ a, b ≤ 10^6",5 10|10,7 3|7,-1 -2|-1,0 0|0,100 200|200,-50 50|50,123 321|321
+Find the Minimum of Two Numbers,Write a function to return the minimum of two numbers.,"Two integers, a and b.",Print the minimum number.,"-10^6 ≤ a, b ≤ 10^6",5 10|5,7 3|3,-1 -2|-2,0 0|0,100 200|100,-50 50|-50,123 321|123
+Check If a Number is Positive or Negative,"Write a function to check if a number is positive, negative, or zero.","A single integer, n.","Print 'Positive', 'Negative', or 'Zero'.",-10^6 ≤ n ≤ 10^6,5|Positive,-3|Negative,0|Zero,100|Positive,-100|Negative,999|Positive,-1|Negative
+Find the Square of a Number,Write a function to compute the square of a number.,"A single integer, n.",Print the square of the number.,-10^3 ≤ n ≤ 10^3,2|4,5|25,-3|9,10|100,-10|100,0|0,50|2500
+Find the Cube of a Number,Write a function to compute the cube of a number.,"A single integer, n.",Print the cube of the number.,-10^3 ≤ n ≤ 10^3,2|8,-3|-27,4|64,5|125,-5|-125,0|0,10|1000
+Check If a Number is Even or Odd (Using Modulo),Write a function to check if a number is even or odd.,"A single integer, n.",Print 'Even' or 'Odd'.,1 ≤ n ≤ 10^6,2|Even,3|Odd,4|Even,5|Odd,10|Even,15|Odd,20|Even
+Swap Two Numbers Without a Third Variable,Write a function to swap two numbers without using an extra variable.,"Two integers, a and b.",Print the swapped values.,"-10^6 ≤ a, b ≤ 10^6",3 5|5 3,10 20|20 10,-1 1|1 -1,7 7|7 7,-5 -10|-10 -5,50 100|100 50,123 321|321 123

@@ -1,0 +1,32 @@
+[
+    {
+      "roll_no":"Admin123",
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "password": "studentpassword123",
+      "role": "Student"
+    },
+    {
+      "roll_no":"232AD191",
+      "name": "Bob Smith",
+      "email": "bob.smith@example.com",
+      "password": "studentpassword456",
+      "role": "Student"
+    },
+    {
+      "roll_no":"232AD205",
+      "name": "Charlie Brown",
+      "email": "charlie.brown@example.com",
+      "password": "mypassword789",
+      "role": "Student"
+    },
+    {
+      "roll_no":"232AD286",
+
+      "name": "Diana Prince",
+      "email": "diana.prince@example.com",
+      "password": "wonderpassword101",
+      "role": "Student"
+    }
+  ]
+  

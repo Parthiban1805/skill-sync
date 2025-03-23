@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Main app container - using CSS Grid for layout */
+.app-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 260px;
+  background-color: #fff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+/* Main content area */
+.main-content {
+  grid-column: 2;
+  padding: 1.5rem;
+  min-height: 100vh;
+  margin-left: 260px; /* Match the sidebar width */
+  width: calc(100% - 260px);
+  transition: all 0.3s ease;
+}
+
+/* For mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .app-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    width: 80px; /* Collapsed state */
+    transition: width 0.3s ease;
+  }
+  
+  .sidebar.expanded {
+    width: 260px;
+  }
+  
+  .main-content {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+  }
+  
+  .main-content.sidebar-expanded {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+  }
+}
+
+/* When sidebar is hidden completely (login page) */
+.app-container:has(.main-content:only-child) .main-content {
+  margin-left: 0;
+  width: 100%;
+  grid-column: 1;
+}
+
+/* Active navigation items */
+.nav-link.active {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-left: 3px solid #4285f4;
+}
+
+/* Admin specific styling */
+.admin-routes .main-content {
+  background-color: #f8f9fa;
+}
+
+/* Document editor specific styles */
+.document-editor-container .main-content {
+  padding: 0;
+}
+
+/* Animation for page transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}

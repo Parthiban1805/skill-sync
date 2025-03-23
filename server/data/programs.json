@@ -1,0 +1,63 @@
+[
+    {
+      "ProgramName": "C",
+      "ProgramDescription": "Introduction to C programming",
+      "noOfLevels": 5,
+      "levels": [
+        { "levelNo": 1, "levelName": "C level-1" },
+        { "levelNo": 2, "levelName": "C level-2" },
+        { "levelNo": 3, "levelName": "C level-3" },
+        { "levelNo": 4, "levelName": "C level-4" },
+        { "levelNo": 5, "levelName": "C level-5" }
+      ]
+    },
+    {
+      "ProgramName": "C++",
+      "ProgramDescription": "Introduction to C++ programming",
+      "noOfLevels": 5,
+      "levels": [
+        { "levelNo": 1, "levelName": "C++ level-1" },
+        { "levelNo": 2, "levelName": "C++ level-2" },
+        { "levelNo": 3, "levelName": "C++ level-3" },
+        { "levelNo": 4, "levelName": "C++ level-4" },
+        { "levelNo": 5, "levelName": "C++ level-5" }
+      ]
+    },
+    {
+      "ProgramName": "Python",
+      "ProgramDescription": "Introduction to Python programming",
+      "noOfLevels": 5,
+      "levels": [
+        { "levelNo": 1, "levelName": "Python level-1" },
+        { "levelNo": 2, "levelName": "Python level-2" },
+        { "levelNo": 3, "levelName": "Python level-3" },
+        { "levelNo": 4, "levelName": "Python level-4" },
+        { "levelNo": 5, "levelName": "Python level-5" }
+      ]
+    },
+    {
+      "ProgramName": "Java",
+      "ProgramDescription": "Introduction to Java programming",
+      "noOfLevels": 5,
+      "levels": [
+        { "levelNo": 1, "levelName": "Java level-1" },
+        { "levelNo": 2, "levelName": "Java level-2" },
+        { "levelNo": 3, "levelName": "Java level-3" },
+        { "levelNo": 4, "levelName": "Java level-4" },
+        { "levelNo": 5, "levelName": "Java level-5" }
+      ]
+    },
+    {
+      "ProgramName": "MySQL",
+      "ProgramDescription": "Introduction to MySQL database management",
+      "noOfLevels": 5,
+      "levels": [
+        { "levelNo": 1, "levelName": "MySQL level-1" },
+        { "levelNo": 2, "levelName": "MySQL level-2" },
+        { "levelNo": 3, "levelName": "MySQL level-3" },
+        { "levelNo": 4, "levelName": "MySQL level-4" },
+        { "levelNo": 5, "levelName": "MySQL level-5" }
+      ]
+    }
+  ]
+  

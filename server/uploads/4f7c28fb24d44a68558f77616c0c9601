@@ -1,0 +1,2 @@
+title,description,inputFormat,outputFormat,constraints,testCases
+Find the Largest Prime Factor check 1,Write a function to determine the largest prime factor of a given number.,"A single integer, n.",Print the largest prime factor.,1 <= n <= 10^12,10:5|13195:29|1:1|9999999967:9999999967

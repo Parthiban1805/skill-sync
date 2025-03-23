@@ -1,0 +1,11 @@
+question,option1,option2,option3,option4,answer,mark
+Which of the following is a valid variable declaration in C?,int 1x;,int x1;,integer x;,num x;,int x1;,1
+Which operator is used to get the address of a variable in C?,*,&,%,#,&,1
+Which function is used to read a character in C?,scanf(),getchar(),gets(),input(),getchar(),1
+Which of the following is not a valid data type in C?,float,int,real,char,real,1
+What is the correct syntax for a 'for' loop in C?,for(int i = 0; i < 10; i++),for(i=0; i<10; i++),loop(i=0; i<10; i++),repeat(i=0; i<10; i++),for(int i = 0; i < 10; i++),1
+Which function is used to print output in C?,printf(),cout<<,System.out.println(),print(),printf(),1
+Which header file is required for standard input and output functions?,conio.h,stdio.h,stdlib.h,string.h,stdio.h,1
+Which operator is used for logical AND in C?,&,&&,|,||,&&,1
+What is the size of 'int' data type in C (on a 32-bit system)?,2 bytes,4 bytes,8 bytes,1 byte,4 bytes,1
+Which symbol is used to denote a preprocessor directive in C?,$,&,#,*,#,1

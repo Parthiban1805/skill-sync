@@ -1,0 +1,336 @@
+[
+  {
+    "ProgramName": "C",
+    "ProgramDescription": "A basic introduction to the C programming language.",
+    "noOfLevels": 5,
+    "levels": [
+      {
+        "levelNo": 1,
+        "levelName": "C level-1",
+        "videos": [
+          {
+            "levelDescription": "Variables, Data Types, and Constants",
+            "videoLink": "https://www.youtube.com/embed/fO4FwJOShdc?si=sE8zECn9-lSl_ELE"
+          },
+          {
+            "levelDescription": "Input and Output in C (Using scanf and printf)",
+            "videoLink": "https://www.youtube.com/embed/1VWb9X0CY8o?si=UoIXhxz6xkaKWBK9"
+          },
+          {
+            "levelDescription": "Introduction to Operators in C",
+            "videoLink": "https://www.youtube.com/embed/50Pb27JoUrw?si=lmErfQhY1LOKjQ_3"
+          },
+          {
+            "levelDescription": "Conditional Statements (if, if-else)",
+            "videoLink": "https://www.youtube.com/embed/Led5aHdLoT4?si=sGCY2-j1ub39ebdC"
+          }
+        ]
+      },
+      {
+        "levelNo": 2,
+        "levelName": "C level-2",
+        "videos": [
+          {
+            "levelDescription": "Loops in C (for, while)",
+            "videoLink": "https://www.youtube.com/embed/qUPXsPtWGoY?si=s-UYzTRPvJt8UEm4"
+          },
+          {
+            "levelDescription": "Nested Loops",
+            "videoLink": "https://www.youtube.com/embed/tdjDQ-uVjR0?si=ciMbKPYghferjoxP"
+          },
+          {
+            "levelDescription": "Advanced Loop Patterns (e.g., Pyramid and Pattern Printing)",
+            "videoLink": "https://www.youtube.com/embed/lsOOs5J8ycw?si=HFqxETHuIuwSArOq"
+          }
+        
+        ]
+      },
+      {
+        "levelNo": 3,
+        "levelName": "C level-3",
+        "videos": [
+          {
+            "levelDescription": "Definition of Array",
+            "videoLink": "https://youtu.be/55l-aZ7_F24?si=JYAiD16VEAYKp99J"
+          },
+          {
+            "levelDescription": "Introduction to Arrays (Single-Dimensional Arrays)",
+            "videoLink": "https://youtu.be/kWJHzambtNo?si=g9AUJshw_xUCtI_4"
+          },
+          {
+            "levelDescription": "Introduction to Arrays (Two-Dimensional Arrays)",
+            "videoLink": "https://youtu.be/J1aQ9JN4vZY?si=OqNjusEYQ_Zs9nR8"
+          },
+          {
+            "levelDescription": "Multi-Dimensional Arrays",
+            "videoLink": "https://youtu.be/36z4qgN3GWw?si=M3YOkEt213deCYWY"
+          }
+        ]
+      },
+      {
+        "levelNo": 4,
+        "levelName": "C level-4",
+        "videos": [
+          {
+            "levelDescription": "Introduction to Strings in C",
+            "videoLink": "https://youtu.be/lxOcM748Xc0?si=HjpjM6J-EGcrWAbN"
+          },
+          {
+            "levelDescription": "Array of Strings",
+            "videoLink": "https://youtu.be/IlqiTmcK1Eg?si=ZMZomfaB0OVyRsCi"
+          },
+          {
+            "levelDescription": "Traversing a String",
+            "videoLink": "https://youtu.be/QLfbvsmTu88?si=y2THwGZS_EZn4Lyq"
+          }
+        ]
+      },
+      {
+        "levelNo": 5,
+        "levelName": "C level-5",
+        "videos": [
+          {
+            "levelDescription": " Introduction to Functions",
+            "videoLink": "https://youtu.be/3lqgdqoY83o?si=vXkDgGXEYAKHodfr"
+          },
+          {
+            "levelDescription": "Function Declaration and Definition and its calling",
+            "videoLink": "https://youtu.be/5wAf9nzX2R8?si=Uxa8bkhPXoSNHykl"
+          },
+          {
+            "levelDescription": "Parameters in Functions",
+            "videoLink": "https://youtu.be/_ztGoCKDLHs?si=pZOKx0un8KNzPrXU"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ProgramName": "C++",
+    "ProgramDescription": "Learn the fundamentals of C++ programming.",
+    "noOfLevels": 5,
+    "levels": [
+      {
+        "levelNo": 1,
+        "levelName": "C++ level-1",
+        "videos": [
+          {
+            "levelDescription": "C++ Basics and Syntax",
+            "videoLink": "https://www.youtube.com/embed/imNlJohlLPk?si=z-zMySUyx6gBv0Eo"
+          }
+        ]
+      },
+      {
+        "levelNo": 2,
+        "levelName": "C++ level-2",
+        "videos": [
+          {
+            "levelDescription": "Object-Oriented Programming in C++",
+            "videoLink": "https://www.youtube.com/embed/2Dhec_2zGUk?si=f2hiC9NFR8LJdSFm"
+          }
+        ]
+      },
+      {
+        "levelNo": 3,
+        "levelName": "C++ level-3",
+        "videos": [
+          {
+            "levelDescription": "Advanced C++ Concepts",
+            "videoLink": "https://youtube.com/playlist?list=PLfVsf4Bjg79AxxmZwARAh3J9SHNGarty8&si=C1xRcLAgQyQHBugb"
+          }
+        ]
+      },
+      {
+        "levelNo": 4,
+        "levelName": "C++ level-4",
+        "videos": [
+          {
+            "levelDescription": "C++ Standard Library and STL",
+            "videoLink": "https://youtu.be/RRVYpIET_RU?si=fLgufzQs13Cw4-4D"
+          }
+        ]
+      },
+      {
+        "levelNo": 5,
+        "levelName": "C++ level-5",
+        "videos": [
+          {
+            "levelDescription": "Templates and Exception Handling in C++",
+            "videoLink": "https://youtu.be/EyXXLpFriMc?si=JRJm9foUyG0nCd9R"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ProgramName": "Python",
+    "ProgramDescription": "A complete guide to learning Python programming.",
+    "noOfLevels": 5,
+    "levels": [
+      {
+        "levelNo": 1,
+        "levelName": "Python level-1",
+        "videos": [
+          {
+            "levelDescription": "Introduction to Python",
+            "videoLink": "https://www.youtube.com/embed/DInMru2Eq6E?si=2Ds3Aucq5qrsdvT"
+          }
+        ]
+      },
+      {
+        "levelNo": 2,
+        "levelName": "Python level-2",
+        "videos": [
+          {
+            "levelDescription": "Python Data Structures",
+            "videoLink": "https://www.youtube.com/embed/m9n2f9lhtrw?si=MR9G6julEIJVryPq"
+          }
+        ]
+      },
+      {
+        "levelNo": 3,
+        "levelName": "Python level-3",
+        "videos": [
+          {
+            "levelDescription": "Functions and Modules in Python",
+            "videoLink": "https://www.youtube.com/embed/eezLhJ5oGYg?si=yMl-DIPmNvSXfMN"
+          }
+        ]
+      },
+      {
+        "levelNo": 4,
+        "levelName": "Python level-4",
+        "videos": [
+          {
+            "levelDescription": "Object-Oriented Programming in Python",
+            "videoLink": "https://youtu.be/JeznW_7DlB0?si=DZ926rq0xRNBWitr"
+          }
+        ]
+      },
+      {
+        "levelNo": 5,
+        "levelName": "Python level-5",
+        "videos": [
+          {
+            "levelDescription": "Advanced Python Concepts and Libraries",
+            "videoLink": "https://youtu.be/Gx5qb1uHss4?si=nJLnCghvQ9GSHrRP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ProgramName": "Java",
+    "ProgramDescription": "Master the Java programming language with this course.",
+    "noOfLevels": 5,
+    "levels": [
+      {
+        "levelNo": 1,
+        "levelName": "Java level-1",
+        "videos": [
+          {
+            "levelDescription": "Java Basics and Syntax",
+            "videoLink": "https://www.youtube.com/embed/3lOhz1F1zHA?si=q-0AZ9n8EzhXWP-v"
+          }
+        ]
+      },
+      {
+        "levelNo": 2,
+        "levelName": "Java level-2",
+        "videos": [
+          {
+            "levelDescription": "Object-Oriented Programming in Java",
+            "videoLink": "https://www.youtube.com/embed/nqB3qAtDLKU?si=FZcBBQdcXex71QBv"
+          }
+        ]
+      },
+      {
+        "levelNo": 3,
+        "levelName": "Java level-3",
+        "videos": [
+          {
+            "levelDescription": "Java Collections Framework",
+            "videoLink": "https://youtu.be/9ogGan-R1pc?si=dROUNTaIPMkDxu0Q"
+          }
+        ]
+      },
+      {
+        "levelNo": 4,
+        "levelName": "Java level-4",
+        "videos": [
+          {
+            "levelDescription": "Java Streams and Lambdas",
+            "videoLink": "https://youtu.be/tj5sLSFjVj4?si=iG5YS4_JUmBdguOg"
+          }
+        ]
+      },
+      {
+        "levelNo": 5,
+        "levelName": "Java level-5",
+        "videos": [
+          {
+            "levelDescription": "Concurrency and Multithreading in Java",
+            "videoLink": "https://youtube.com/playlist?list=PLL8woMHwr36EDxjUoCzboZjedsnhLP1j4&si=w7TZdvI4Q2gOwdMh"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ProgramName": "MySQL",
+    "ProgramDescription": "Learn the basics and advanced concepts of MySQL database.",
+    "noOfLevels": 5,
+    "levels": [
+      {
+        "levelNo": 1,
+        "levelName": "MySQL level-1",
+        "videos": [
+          {
+            "levelDescription": "Introduction to Databases and MySQL",
+            "videoLink": "https://www.youtube.com/embed/2bW3HuaAUcY?si=gMrCPIEgc5E8Wvme"
+          }
+        ]
+      },
+      {
+        "levelNo": 2,
+        "levelName": "MySQL level-2",
+        "videos": [
+          {
+            "levelDescription": "MySQL Data Types and Queries",
+            "videoLink": "https://www.youtube.com/embed/CG78jU1IXjM?si=oeva89fY2hIkiXj0"
+          }
+        ]
+      },
+      {
+        "levelNo": 3,
+        "levelName": "MySQL level-3",
+        "videos": [
+          {
+            "levelDescription": "Joins and Subqueries in MySQL",
+            "videoLink": "https://youtu.be/G3lJAxg1cy8?si=PtXgWRMzwy8Jq5Jd"
+          }
+        ]
+      },
+      {
+        "levelNo": 4,
+        "levelName": "MySQL level-4",
+        "videos": [
+          {
+            "levelDescription": "Indexing and Optimization in MySQL",
+            "videoLink": "https://youtu.be/t0grczCICMk?si=hNz30lZQWQBPRFiA"
+          }
+        ]
+      },
+      {
+        "levelNo": 5,
+        "levelName": "MySQL level-5",
+        "videos": [
+          {
+            "levelDescription": "Transactions and Stored Procedures in MySQL",
+            "videoLink": "https://youtu.be/7vnxpcqmqNQ?si=uI9cv5CrRFuQswPT"
+          }
+        ]
+      }
+    ]
+  }
+]

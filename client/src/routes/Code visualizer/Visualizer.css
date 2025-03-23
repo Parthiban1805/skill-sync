@@ -1,0 +1,367 @@
+.python-visualizer {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+}
+
+.visualizer-header h1 {
+    color: #1e293b;
+    margin-bottom: 32px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.visualizer-header h1::before {
+    content: '';
+    width: 4px;
+    height: 22px;
+    background-color: #3b82f6;
+    border-radius: 4px;
+}
+
+.visualizer-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.visualizer-controls label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #4a5568;
+    font-size: 14px;
+}
+
+.visualizer-controls input[type="range"] {
+    width: 150px;
+}
+
+.visualizer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.editor-section, .visualization-section {
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.editor-section h3, .visualization-section h3 {
+    color: #1a365d;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.editor-container {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.input-container {
+    margin-bottom: 16px;
+}
+
+.input-textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.run-controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.run-button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+.run-button:hover {
+    background-color: #2563eb;
+}
+
+.run-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Added CSS for the step controls container */
+.step-controls-container {
+    margin: 16px 0;
+}
+
+.visualization-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.step-controls {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    justify-content: center;
+}
+
+.step-controls button {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #4a5568;
+}
+
+.step-controls button:hover:not(:disabled) {
+    background-color: transparent;
+}
+
+.step-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.step-controls button:disabled:hover {
+    background-color: #f8fafc;
+}
+
+/* Control button styles for Lucide icons */
+.control-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.control-button svg {
+    flex-shrink: 0;
+}
+
+.control-button span {
+    display: inline-block;
+}
+
+.step-indicator {
+    font-size: 0.7rem;
+    color: #4a5568;
+    padding: 10px 20px 0px 10px;
+}
+
+.play-button {
+    background-color: #10b981 !important;
+    color: white !important;
+}
+
+.play-button:hover {
+    background-color: #059669 !important;
+}
+
+.stop-button {
+    background-color: #f43f5e !important;
+    color: white;
+}
+
+.stop-button:hover {
+    background-color: #e11d48 !important;
+}
+
+.visualization-panels {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.code-visualization {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.code-lines {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.code-line {
+    display: flex;
+    padding: 4px 0;
+}
+
+.active-line {
+    background-color: rgba(59, 130, 246, 0.1);
+    border-left: 3px solid #3b82f6;
+}
+
+.line-number {
+    min-width: 40px;
+    text-align: right;
+    padding-right: 12px;
+    color: #64748b;
+    user-select: none;
+}
+
+.line-content {
+    margin: 0;
+    white-space: pre;
+}
+
+.state-visualization {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.variables-visualization h4 {
+    color: #1a365d;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.variables-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.variable-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    background-color: white;
+}
+
+.variable-name {
+    color: #1e40af;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.variable-value {
+    font-family: monospace;
+    color: #4a5568;
+    font-size: 14px;
+}
+
+.array-visualization, .object-visualization {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.array-item, .object-property {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.array-index, .property-key {
+    color: #64748b;
+    font-size: 12px;
+    min-width: 50px;
+}
+
+.array-value, .property-value {
+    font-family: monospace;
+}
+
+.placeholder-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: #64748b;
+    font-size: 16px;
+    text-align: center;
+}
+
+.error-message {
+    background-color: #fff1f2;
+    border: 1px solid #fecaca;
+    color: #ef4444;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.output-section {
+    margin-top: 16px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.output-section h3 {
+    color: #1a365d;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.output-content {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: monospace;
+    font-size: 14px;
+    color: #1e293b;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .visualizer-main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .step-controls {
+        justify-content: center;
+    }
+    
+    .step-indicator {
+        width: 100%;
+        text-align: center;
+        margin: 8px 0;
+    }
+}

@@ -1,0 +1,210 @@
+/* alllevel.css - Styled to match EligibleLevels component */
+
+.total-level-table-page {
+  margin-bottom: 48px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f1f5f9;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.total-level-table-header {
+  margin-bottom: 24px;
+}
+
+.total-level-title {
+  font-size: 22px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.total-level-title::before {
+  content: '';
+    width: 4px;
+    height: 22px;
+    background-color: #3b82f6;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.total-level-subtitle {
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+/* Table styles */
+.total-level-course-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.total-level-course-th {
+  background-color: #f1f5f9;
+  color: #475569;
+  font-weight: 600;
+  text-align: left;
+  padding: 16px;
+  font-size: 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.total-level-course-td {
+  padding: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 14px;
+}
+
+.total-level-course-table tbody tr:last-child .total-level-course-td {
+  border-bottom: none;
+}
+
+.total-level-course-row:hover {
+  background-color: #f8fafc;
+}
+
+/* Status indicators */
+.total-level-course-td:last-child {
+  font-weight: 500;
+}
+
+.total-level-course-td:last-child:contains("completed") {
+  color: #10b981;
+  position: relative;
+}
+
+.total-level-course-td:last-child:contains("not-completed") {
+  color: #94a3b8;
+  position: relative;
+}
+
+/* Style the text directly */
+.total-level-course-td:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.total-level-course-td:last-child::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.total-level-course-td:last-child:contains("completed")::before {
+  background-color: #10b981;
+}
+
+.total-level-course-td:last-child:contains("not-completed")::before {
+  background-color: #94a3b8;
+}
+
+/* Pagination styles */
+.total-level-course-pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  align-items: center;
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.total-level-course-pagination-text {
+  font-size: 14px;
+  width: 100%;
+}
+
+.total-level-course-pagination-select {
+  padding: 6px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background-color: white;
+  color: #475569;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Loading state */
+.total-level-loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+  color: #64748b;
+}
+
+.total-level-loading-spinner {
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #3b82f6;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Empty state */
+.total-level-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin-top: 20px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  text-align: center;
+  color: #64748b;
+}
+
+.total-level-empty-state h3 {
+  margin-top: 16px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.total-level-empty-state p {
+  margin: 8px 0 20px;
+}
+
+.total-level-empty-state-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.total-level-empty-state-btn:hover {
+  background-color: #2563eb;
+}
