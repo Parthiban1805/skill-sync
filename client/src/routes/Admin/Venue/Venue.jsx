@@ -34,7 +34,7 @@ const AddVenue = () => {
         formData.append('file', venue.csvFile);
       }
 
-      const response = await axios.post('http://localhost:5001/skill-sync/add-venue', formData, {
+      const response = await axios.post('https://assessly-server.weacttech.com/skill-sync/add-venue', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

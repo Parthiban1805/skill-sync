@@ -18,7 +18,7 @@ const QuestionList = () => {
             console.log("Fetching questions for program:", selectedProgram);
             setLoading(true);
             try {
-                const response = await axios.get(`http://localhost:5001/skill-sync/questions?program=${selectedProgram}&level=${selectedLevel}`);
+                const response = await axios.get(`https://assessly-server.weacttech.com/skill-sync/questions?program=${selectedProgram}&level=${selectedLevel}`);
                 setQuestions(response.data);
                 setError("");
             } catch (err) {
@@ -38,7 +38,7 @@ const QuestionList = () => {
         const fetchLevels = async () => {
             setLoading(true);
             try {
-                const response = await axios.get(`http://localhost:5001/skill-sync/levels?program=${selectedProgram}`);
+                const response = await axios.get(`https://assessly-server.weacttech.com/skill-sync/levels?program=${selectedProgram}`);
                 setLevels(response.data);
                 setSelectedLevel(response.data[0]?.LevelNo || null);
                 setError("");

@@ -42,7 +42,7 @@ const PracticeQuestion = () => {
         }
   
         try {
-            const response = await fetch('http://localhost:5001/skill-sync/practice-questions', {
+            const response = await fetch('https://assessly-server.weacttech.com/skill-sync/practice-questions', {
                 method: 'POST',
                 body: formData,
             });

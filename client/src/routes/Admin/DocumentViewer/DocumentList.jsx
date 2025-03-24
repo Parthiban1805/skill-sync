@@ -21,7 +21,7 @@ const DocumentList = () => {
     const fetchDocuments = async (page = 1) => {
         setLoading(true);
         try {
-        const res = await axios.get(`http://localhost:5001/skill-sync/all-documents?page=${page}&limit=10`);
+        const res = await axios.get(`https://assessly-server.weacttech.com/skill-sync/all-documents?page=${page}&limit=10`);
         setDocuments(res.data.documents);
         setPagination({
             currentPage: res.data.currentPage,
@@ -41,7 +41,7 @@ const DocumentList = () => {
     const fetchDocumentByTitle = async (title) => {
         setLoading(true);
         try {
-        const res = await axios.get(`http://localhost:5001/skill-sync/documents/${title}`);
+        const res = await axios.get(`https://assessly-server.weacttech.com/skill-sync/documents/${title}`);
         setCurrentDocument(res.data);
         setError(null);
         } catch (err) {
@@ -62,7 +62,7 @@ const DocumentList = () => {
         }
         
         try {
-        await axios.delete(`http://localhost:5001/skill-sync/documents/${title}`);
+        await axios.delete(`https://assessly-server.weacttech.com/skill-sync/documents/${title}`);
         showToast(`Document "${title}" deleted successfully`, 'success');
         
         // Refresh document list

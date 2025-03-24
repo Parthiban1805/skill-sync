@@ -11,7 +11,6 @@ const router = express.Router();
 router.post("/submit", async (req, res) => {
     try {
         const { id, studentId, questions } = req.body;
-        console.log("🔵 Received request body:", JSON.stringify(req.body, null, 2));
 
         if (!Array.isArray(questions)) {
             return res.status(400).json({ message: "Questions must be an array" });

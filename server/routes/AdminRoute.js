@@ -13,7 +13,6 @@ router.get('/all-students', async (req, res) => {
   router.get('/student-details/:id', async (req, res) => {
     const { id } = req.params;
 
-    console.log('Request received for student ID:', id);
 
     try {
         // Fetch student details and populate the program-related fields

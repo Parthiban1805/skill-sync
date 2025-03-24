@@ -23,8 +23,8 @@ const insertStudentData = async () => {
 
   const studentData = {
     student_id: "S11",
-    name: "test1",
-    email: "test12@gmail.com",
+    name: "test",
+    email: "test@gmail.com",
     password: hashedPassword,
     semester: "3",
     year: "2025",

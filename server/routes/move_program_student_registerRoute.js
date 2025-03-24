@@ -8,11 +8,9 @@ router.post('/move-to-registered', async (req, res) => {
   try {
     const { studentId, programName, levelNo } = req.body;
 
-    console.log('Request received:', { studentId, programName, levelNo });
 
     // Find the student
     const student = await Student.findOne({ student_id: studentId });
-    console.log('Student found:', student);
 
     if (!student) {
       console.error('Student not found');
@@ -21,7 +19,6 @@ router.post('/move-to-registered', async (req, res) => {
 
     // Find the program details
     const availableProgram = await AvailableProgram.findOne({ ProgramName: programName }).lean();
-    console.log('Available Program found:', availableProgram);
 
     if (!availableProgram) {
       console.error('Program not found');
@@ -30,7 +27,6 @@ router.post('/move-to-registered', async (req, res) => {
 
     // Find the level details
     const level = availableProgram.levels.find((level) => level.levelNo === levelNo);
-    console.log('Level details found:', level);
 
     if (!level) {
       console.error('Level not found');
@@ -43,7 +39,6 @@ router.post('/move-to-registered', async (req, res) => {
         registered.ProgramName === programName && registered.levelNo === levelNo
     );
 
-    console.log('Is already registered:', isAlreadyRegistered);
 
     if (isAlreadyRegistered) {
       console.error('Level is already registered');
@@ -59,13 +54,11 @@ router.post('/move-to-registered', async (req, res) => {
       levelName: level.levelName,
       statuslevel: 'not-completed',
     };
-    console.log('New program to register:', newProgram);
 
     student.programRegistered.push(newProgram);
 
     // Save the updated student
     const savedStudent = await student.save();
-    console.log('Updated student after registration:', savedStudent);
 
     res.status(200).json({ message: 'Program moved to registered list successfully.' });
   } catch (error) {

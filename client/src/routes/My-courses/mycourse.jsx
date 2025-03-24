@@ -72,7 +72,7 @@ const MyCourse = () => {
       if (!studentId) return;
       
       try {
-        const response = await fetch(`http://localhost:5001/skill-sync/my-course/${studentId}`);
+        const response = await fetch(`https://assessly-server.weacttech.com/skill-sync/my-course/${studentId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }

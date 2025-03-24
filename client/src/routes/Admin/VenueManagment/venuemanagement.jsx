@@ -35,7 +35,7 @@ const VenueManagement = () => {
 
   const fetchVenues = async () => {
     try {
-      const response = await fetch('http://localhost:5001/skill-sync/venues');
+      const response = await fetch('https://assessly-server.weacttech.com/skill-sync/venues');
       const data = await response.json();
       setVenues(data);
     } catch (err) {
@@ -50,7 +50,7 @@ const VenueManagement = () => {
 
   const handleDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:5001/skill-sync/venues/${venueToDelete._id}`, {
+      const response = await fetch(`https://assessly-server.weacttech.com/skill-sync/venues/${venueToDelete._id}`, {
         method: 'DELETE',
       });
       
@@ -72,7 +72,7 @@ const VenueManagement = () => {
   const handleEdit = async (venue) => {
     if (editingVenue?.id === venue._id) {
       try {
-        const response = await fetch(`http://localhost:5001/skill-sync/venues/${venue._id}`, {
+        const response = await fetch(`https://assessly-server.weacttech.com/skill-sync/venues/${venue._id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

@@ -15,7 +15,7 @@ const AdminDashboard = () => {
     const [filterDepartment, setFilterDepartment] = useState('');
 
     useEffect(() => {
-        axios.get('http://localhost:5001/skill-sync/all-students')
+        axios.get('https://assessly-server.weacttech.com/skill-sync/all-students')
             .then(response => {
                 setStudentsRecord(response.data);
                 setFilteredStudents(response.data);
@@ -49,7 +49,7 @@ const AdminDashboard = () => {
 
     const handleStudentClick = async (studentId) => {
         try {
-            const response = await axios.get(`http://localhost:5001/skill-sync/student-details/${studentId}`);
+            const response = await axios.get(`https://assessly-server.weacttech.com/skill-sync/student-details/${studentId}`);
             setSelectedStudent(response.data);
         } catch (error) {
             console.error('Error fetching student details:', error);

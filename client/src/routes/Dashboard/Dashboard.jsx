@@ -111,7 +111,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchProgram = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/skill-sync/programs');
+        const response = await axios.get('https://assessly-server.weacttech.com/skill-sync/programs');
         
         // Add the img property by mapping with allCourses
         const programsWithImages = response.data.map((prog) => {

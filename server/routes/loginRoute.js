@@ -13,7 +13,6 @@ router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    console.log('Login request received:', { email });
 
     if (!email || !password) {
       console.log('Missing email or password');
@@ -22,7 +21,6 @@ router.post('/login', async (req, res) => {
 
     // Check in Student model first
     let user = await Student.findOne({ email });
-    console.log('Student model lookup result:', user);
 
     // If user is not found in Student model, check in User model
     if (!user) {
@@ -36,7 +34,6 @@ router.post('/login', async (req, res) => {
     }
 
     const isPasswordValid = await bcrypt.compare(password, user.password);
-    console.log('Password validation result:', isPasswordValid);
 
     if (!isPasswordValid) {
       console.log('Invalid password for user:', { email });
@@ -60,7 +57,6 @@ router.post('/login', async (req, res) => {
       userDetails.programCompleted = user.programCompleted;
     }
 
-    console.log('User details to be included in token:', userDetails);
 
     // Generate JWT token
     const token = jwt.sign(

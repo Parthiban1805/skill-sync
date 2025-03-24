@@ -65,7 +65,7 @@ const EligibleLevelsPage = () => {
       
       try {
         const response = await axios.post(
-          `http://localhost:5001/skill-sync/student/${studentId}/calculate-next-levels`
+          `https://assessly-server.weacttech.com/skill-sync/student/${studentId}/calculate-next-levels`
         );
         setEligibleLevels(response.data.eligibleLevels || []);
       } catch (error) {
@@ -87,7 +87,7 @@ const EligibleLevelsPage = () => {
     setRegistrationInProgress(true);
     
     try {
-      await axios.post('http://localhost:5001/skill-sync/move-to-registered', {
+      await axios.post('https://assessly-server.weacttech.com/skill-sync/move-to-registered', {
         studentId: userDetails.student_id,
         programName: selectedLevel.ProgramName,
         levelNo: selectedLevel.nextLevelNo,

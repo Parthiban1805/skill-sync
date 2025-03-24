@@ -67,7 +67,7 @@ useEffect(() => {
     console.log(id);  
     const fetchProgram = async () => {
       try {
-        const response = await axios.get(`http://localhost:5001/skill-sync/programs/${id}`);
+        const response = await axios.get(`https://assessly-server.weacttech.com/skill-sync/programs/${id}`);
         console.log(response.data);
         setProgram(response.data);
       } catch (error) {

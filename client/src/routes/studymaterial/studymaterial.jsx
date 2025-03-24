@@ -29,7 +29,7 @@ const CodeEditor = ({ defaultValue, language }) => {
     setOutput('');
 
     try {
-      const response = await axios.post('http://localhost:5001/skill-sync/compile', {
+      const response = await axios.post('https://assessly-server.weacttech.com/skill-sync/compile', {
         language: language || 'c',
         code: code
       });
@@ -471,7 +471,7 @@ const StudyMaterial = () => {
 
         // Fetch study material data
         const response = await axios.get(
-          `http://localhost:5001/skill-sync/studymaterial/${courseId}/${userDetails.student_id}`,
+          `https://assessly-server.weacttech.com/skill-sync/studymaterial/${courseId}/${userDetails.student_id}`,
           {
             timeout: 5000 // Set timeout to 5 seconds
           }
@@ -529,7 +529,7 @@ const StudyMaterial = () => {
         }))
       };
       
-      const response = await axios.post('http://localhost:5001/skill-sync/submit-quiz', payload);
+      const response = await axios.post('https://assessly-server.weacttech.com/skill-sync/submit-quiz', payload);
       
       // Set quiz results and topic with results
       setQuizResults({

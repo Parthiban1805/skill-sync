@@ -67,9 +67,6 @@ router.post('/documents', upload.single('quizFile'), [
           return res.status(400).json({ message: "Program not found" });
       }
       
-      console.log("Program Found:", program);
-      console.log("Levels in Program:", program.levels);
-      console.log("Searching for levelNo:", numericLevelNo);
       
       const level = program.levels.find(lvl => lvl.levelNo === numericLevelNo);
       

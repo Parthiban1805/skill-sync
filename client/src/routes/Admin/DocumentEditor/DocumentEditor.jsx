@@ -142,7 +142,7 @@ const DocumentEditor = ({ match, history }) => {
                 console.log(`${key}:`, value);
             }
     
-            const response = await axios.post('http://localhost:5001/skill-sync/documents', formData, {
+            const response = await axios.post('https://assessly-server.weacttech.com/skill-sync/documents', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

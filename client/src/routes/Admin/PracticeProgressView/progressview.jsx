@@ -35,7 +35,7 @@ const PracticeProgress = () => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:5001/skill-sync/practice-progress');
+      const response = await axios.get('https://assessly-server.weacttech.com/skill-sync/practice-progress');
       setProgressData(response.data);
       setLoading(false);
     } catch (error) {

@@ -5,7 +5,6 @@ const AvailableProgram = require('../models/ProgrammingLang');
 router.post('/student/:studentId/calculate-next-levels', async (req, res) => {
   try {
     const { studentId } = req.params;
-    console.log("backend",studentId)
     // Fetch the student document
     const student = await Student.findOne({student_id: studentId }).populate('programRegistered.program_id');
 

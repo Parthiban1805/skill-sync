@@ -211,7 +211,7 @@ const QuestionDetails = () => {
     const fetchQuestions = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get(`http://localhost:5001/skill-sync/questions/${id}`);
+        const response = await axios.get(`https://assessly-server.weacttech.com/skill-sync/questions/${id}`);
         
         if (response.data.question1) {
           setQuestion1(response.data.question1);
@@ -290,7 +290,7 @@ const QuestionDetails = () => {
       const currentQuestion = activeTab === 1 ? question1 : question2;
 
       if (input.trim()) {
-        const response = await axios.post("http://localhost:5001/skill-sync/compile", {
+        const response = await axios.post("https://assessly-server.weacttech.com/skill-sync/compile", {
           language,
           code,
           input: input.trim(),
@@ -311,7 +311,7 @@ const QuestionDetails = () => {
       results = await Promise.all(
         currentQuestion.testCases.map(async (testCase) => {
           try {
-            const testResponse = await axios.post("http://localhost:5001/skill-sync/compile", {
+            const testResponse = await axios.post("https://assessly-server.weacttech.com/skill-sync/compile", {
               language,
               code,
               input: testCase.input,
@@ -423,7 +423,7 @@ const QuestionDetails = () => {
       }
   
       // Make the submission request
-      const response = await axios.post("http://localhost:5001/skill-sync/submit", {
+      const response = await axios.post("https://assessly-server.weacttech.com/skill-sync/submit", {
         id,
         studentId,
         questions,

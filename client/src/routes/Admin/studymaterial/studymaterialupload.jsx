@@ -45,7 +45,7 @@ const UploadContentForm = () => {
       formDataToSend.append('ProgramName', formData.ProgramName);
       formDataToSend.append('description', formData.description);
 
-      const response = await axios.post('http://localhost:5001/skill-sync/upload-content', formDataToSend, {
+      const response = await axios.post('https://assessly-server.weacttech.com/skill-sync/upload-content', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

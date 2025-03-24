@@ -14,8 +14,6 @@ const upload = multer({ dest: "uploads/" });
 router.post("/questions", upload.single("file"), async (req, res) => {
     const { ProgramName, LevelName, LevelNo } = req.body;
 
-    console.log("Received request body:", req.body);
-    console.log("Received file:", req.file);
 
     if (!ProgramName || !LevelName || !LevelNo) {
         console.error("Missing required fields:", { ProgramName, LevelName, LevelNo });
@@ -28,7 +26,6 @@ router.post("/questions", upload.single("file"), async (req, res) => {
     }
 
     try {
-        console.log("Finding program:", ProgramName);
         const program = await AvailableProgram.findOne({ ProgramName });
 
         if (!program) {
@@ -36,7 +33,6 @@ router.post("/questions", upload.single("file"), async (req, res) => {
             return res.status(404).send({ error: "Program not found." });
         }
 
-        console.log("Program found:", program);
 
         const level = program.levels.find(
             (lvl) => lvl.levelName === LevelName && lvl.levelNo === parseInt(LevelNo, 10)
@@ -47,14 +43,12 @@ router.post("/questions", upload.single("file"), async (req, res) => {
             return res.status(404).send({ error: "Level not found in the specified program." });
         }
 
-        console.log("Level found:", level);
 
         const level_id = level._id;
 
         const questions = [];
         const filePath = req.file.path;
 
-        console.log("Processing file at path:", filePath);
 
         fs.createReadStream(filePath)
             .pipe(csv())
@@ -95,14 +89,11 @@ router.post("/questions", upload.single("file"), async (req, res) => {
                 });
             })
             .on("end", async () => {
-                console.log("Finished processing file. Questions to insert:", questions);
 
                 try {
                     // Save all questions to the database
                     await Question.insertMany(questions);
-                    console.log("Questions inserted successfully.");
                     fs.unlinkSync(filePath); // Remove the uploaded file
-                    console.log("Temporary file deleted.");
                     res.status(201).send({ message: "Questions added successfully!" });
                 } catch (error) {
                     console.error("Error saving questions:", error);
@@ -125,11 +116,9 @@ router.get("/questions", async (req, res) => {
     const { program, level } = req.query;
     const query = { ProgramName: program.trim(), LevelNo: level };
 
-    console.log("Fetching questions with query:", query);
 
     try {
         const questions = await Question.find(query);
-        console.log("Questions fetched:", questions);
         res.json(questions);
     } catch (err) {
         console.error("Error fetching questions:", err);
@@ -141,11 +130,9 @@ router.get("/questions", async (req, res) => {
 router.get("/levels", async (req, res) => {
     const { program } = req.query;
     
-    console.log("Fetching levels for program:", program);
 
     try {
         const levels = await Question.distinct("LevelNo", { ProgramName: program });
-        console.log("Levels fetched:", levels);
         res.json(levels.map(LevelNo => ({ LevelNo })));
     } catch (err) {
         console.error("Error fetching levels:", err);
@@ -155,10 +142,8 @@ router.get("/levels", async (req, res) => {
 
 router.get("/questions/:id", async (req, res) => {
     try {
-        console.log("Incoming request to fetch questions by level_id.");
         
         const levelId = req.params.id;
-        console.log("Received levelId:", levelId);
 
         // Validate levelId
         if (!mongoose.Types.ObjectId.isValid(levelId)) {
@@ -169,7 +154,6 @@ router.get("/questions/:id", async (req, res) => {
         // Convert levelId to ObjectId
         const objectIdLevelId = new mongoose.Types.ObjectId(levelId);
 
-        console.log("Valid level_id, proceeding to query database.");
 
         // Find two questions associated with the provided level_id
         const questions = await Question.find({
@@ -187,7 +171,6 @@ router.get("/questions/:id", async (req, res) => {
             question2: questions[1] || null
         };
 
-        console.log("Questions found for level_id:", levelId, "Questions details:", response);
 
         res.status(200).json(response);
     } catch (error) {
@@ -199,15 +182,12 @@ router.get("/questions/:id", async (req, res) => {
 
 router.get("/admin/questions/:id", async (req, res) => {
     try {
-      console.log("Received request for question ID:", req.params.id);
   
       const question = await Question.findById(req.params.id);
       if (!question) {
-        console.log("Question not found:", req.params.id);
         return res.status(404).send({ error: "Question not found." });
       }
   
-      console.log("Question found:", question);
       res.status(200).send(question);
     } catch (error) {
       console.error("Error fetching question:", error);

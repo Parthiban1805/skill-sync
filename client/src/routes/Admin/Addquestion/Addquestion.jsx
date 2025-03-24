@@ -41,7 +41,7 @@ const AddQuestion = () => {
         }
   
         try {
-            const response = await fetch('http://localhost:5001/skill-sync/questions', {
+            const response = await fetch('https://assessly-server.weacttech.com/skill-sync/questions', {
                 method: 'POST',
                 body: formData,
             });

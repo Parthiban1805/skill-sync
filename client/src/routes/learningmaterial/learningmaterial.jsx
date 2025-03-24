@@ -157,10 +157,10 @@ const LearningMaterial = () => {
         }
   
         const materialResponse = await fetch(
-          `http://localhost:5001/skill-sync/learning-material/${courseId}/${userId}`
+          `https://assessly-server.weacttech.com/skill-sync/learning-material/${courseId}/${userId}`
         );
         const slotResponse = await fetch(
-          'http://localhost:5001/skill-sync/venue/slots'
+          'https://assessly-server.weacttech.com/skill-sync/venue/slots'
         );
   
         console.log("Material Response Status:", materialResponse.status);
@@ -226,7 +226,7 @@ const LearningMaterial = () => {
   const fetchBookedSlot = async (levelId) => {
     try {
       const response = await fetch(
-        `http://localhost:5001/skill-sync/venue/booked/${studentId}/${levelId}`
+        `https://assessly-server.weacttech.com/skill-sync/venue/booked/${studentId}/${levelId}`
       );
       if (response.ok) {
         const data = await response.json();
@@ -320,7 +320,7 @@ const LearningMaterial = () => {
     closeModal();
 
     try {
-      const response = await fetch('http://localhost:5001/skill-sync/venue/book', {
+      const response = await fetch('https://assessly-server.weacttech.com/skill-sync/venue/book', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

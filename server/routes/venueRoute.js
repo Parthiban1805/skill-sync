@@ -19,9 +19,6 @@ const upload = multer({ dest: 'uploads/' });
 router.post('/add-venue', upload.single('file'), async (req, res) => {
   const { name, location } = req.body;
 
-  console.log('Received request to add venue');
-  console.log('Name:', name);
-  console.log('Location:', location);
 
   if (!name || !location || !req.file) {
     console.log('Missing required fields: name, location, or file');
@@ -33,9 +30,7 @@ router.post('/add-venue', upload.single('file'), async (req, res) => {
 
   try {
     const times = [];
-    console.log('Parsing CSV file...');
 
-    // Parse the CSV file
     await new Promise((resolve, reject) => {
       fs.createReadStream(filePath)
         .pipe(csvParser())
@@ -84,7 +79,6 @@ router.post('/add-venue', upload.single('file'), async (req, res) => {
     });
 
     // Save the venue data to the database
-    console.log('Saving venue to the database...');
     const venue = new Venue({
       name,
       location,
@@ -92,10 +86,7 @@ router.post('/add-venue', upload.single('file'), async (req, res) => {
     });
 
     await venue.save();
-    console.log('Venue saved successfully:', venue);
 
-    // Clean up the uploaded file
-    console.log('Cleaning up uploaded file...');
     fs.unlinkSync(filePath);
 
     res.status(201).json({ message: 'Venue added successfully!', venue });
@@ -109,14 +100,11 @@ router.post('/add-venue', upload.single('file'), async (req, res) => {
   
 router.get('/venue/slots', async (req, res) => {
   try {
-    console.log('Fetching slots for today across all venues...');
 
-    // Get today's date and time
     const today = new Date();
     const dayName = today.toLocaleDateString('en-US', { weekday: 'long' });
     const currentTime = today.toTimeString().split(' ')[0]; // Get current time in HH:MM:SS format
 
-    console.log(`Calculated today's date: ${today.toISOString()}, day: ${dayName}, time: ${currentTime}`);
 
     // Fetch all venues that have slots for today's day
     const venues = await Venue.find({ 'times.day': dayName });
@@ -148,8 +136,6 @@ router.get('/venue/slots', async (req, res) => {
       };
     }).filter((venue) => venue.slots.length > 0); // Remove venues with no available slots
 
-    // Log the results before sending the response
-    console.log('Available venues and slots:', venueSlots);
 
     if (venueSlots.length === 0) {
       console.warn(`No available slots found for ${dayName}`);
@@ -165,7 +151,6 @@ router.get('/venue/slots', async (req, res) => {
 });
 
 
-// Function to convert 12-hour format to 24-hour format
 const convertTo24HourFormat = (time) => {
   const [hours, minutes, modifier] = time.split(/[:\s]/);
   let hour24 = parseInt(hours, 10);
@@ -178,10 +163,6 @@ const convertTo24HourFormat = (time) => {
 
 router.get('/venue/slots/tomorrow', async (req, res) => {
     try {
-        console.log('Venue model:', Venue);
-
-        console.log('Fetching slots for tomorrow...');
-
         const today = new Date();
         const tomorrow = new Date(today);
         tomorrow.setDate(today.getDate() + 1);

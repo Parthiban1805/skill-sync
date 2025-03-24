@@ -8,12 +8,10 @@ const User = require('../models/Student'); // Adjust the path to your user model
 router.get('/learning-material/:courseId/:userId', async (req, res) => {
   const { courseId, userId } = req.params; // Extract courseId and userId from the URL params
 
-  console.log(`Request received for courseId: ${courseId}, userId: ${userId}`);
 
   try {
     // Fetch user details
     const user = await User.findById(userId);
-    console.log('User Details:', user);
     if (!user) return res.status(404).json({ error: 'User not found' });
 
     // Check the program completion status in the programCompleted array
@@ -25,11 +23,9 @@ router.get('/learning-material/:courseId/:userId', async (req, res) => {
       return res.status(404).json({ error: 'Program not found for the user' });
     }
 
-    console.log('Completed Program:', completedProgram);
 
     // Find the course material using course_id (use `new mongoose.Types.ObjectId(courseId)` to convert string to ObjectId)
     const course = await Course.findOne({ program_id: new mongoose.Types.ObjectId(courseId) });
-    console.log('Course Details:', course);
     if (!course) return res.status(404).json({ error: 'Course not found' });
 
     // Check the current level status
@@ -41,7 +37,6 @@ router.get('/learning-material/:courseId/:userId', async (req, res) => {
       return res.status(404).json({ error: 'Current level not found in course' });
     }
 
-    console.log('Current Level:', currentLevel);
 
     if (completedProgram.status === 'completed') {
       // If the current level is completed, find the next level

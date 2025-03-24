@@ -20,7 +20,7 @@ const QuestionDetails = () => {
   useEffect(() => {
     const fetchQuestion = async () => {
       try {
-        const response = await axios.get(`http://localhost:5001/skill-sync/admin/questions/${id}`);
+        const response = await axios.get(`https://assessly-server.weacttech.com/skill-sync/admin/questions/${id}`);
         setQuestion(response.data);
         if (response.data.codeTemplate) {
           setCode(response.data.codeTemplate);
@@ -47,7 +47,7 @@ const QuestionDetails = () => {
       let results = [];
 
       if (input.trim()) {
-        const response = await axios.post("http://localhost:5001/skill-sync/compile", {
+        const response = await axios.post("https://assessly-server.weacttech.com/skill-sync/compile", {
           language,
           code,
           input: input.trim(),
@@ -68,7 +68,7 @@ const QuestionDetails = () => {
       results = await Promise.all(
         question.testCases.map(async (testCase) => {
           try {
-            const testResponse = await axios.post("http://localhost:5001/skill-sync/compile", {
+            const testResponse = await axios.post("https://assessly-server.weacttech.com/skill-sync/compile", {
               language,
               code,
               input: testCase.input,

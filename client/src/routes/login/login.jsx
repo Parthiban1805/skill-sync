@@ -56,7 +56,7 @@ const Login = () => {
     setLoading(true);
     setMessage('');
     try {
-      const res = await axios.post('http://localhost:5001/skill-sync/login', { email, password });
+      const res = await axios.post('https://assessly-server.weacttech.com/skill-sync/login', { email, password });
       const token = res.data.token;
       const encryptedToken = encryptToken(token);
       if (!encryptedToken) {
